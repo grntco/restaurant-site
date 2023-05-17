@@ -2,8 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid var(--red);
+}
+
+:root {
+    --yellow: #fef08a;
+    --red: #ef4444;
+}
+
+body {
+    background-color: var(--yellow);
+    font-size: 16px;
+    font-family: sans-serif;
 }
 
 nav {
-    border: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    z-index: 999;
 }
+
+.nav-links-container {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0px 1rem;
+}
+
+.nav-link:hover {
+    background-color: var(--red);
+    cursor: pointer;
+}
+
