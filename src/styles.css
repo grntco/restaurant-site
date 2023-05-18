@@ -9,7 +9,8 @@
     --yellow: #fbbf24;
     --red: #ef4444;
     --orange: #f97316;
-    --blue: #0891b2;
+    --blue: #2dd4bf;
+    --white: #fffbeb;
 }
 
 body {
@@ -34,8 +35,12 @@ nav {
     border-bottom: 3px solid var(--orange);
 }
 
-.logo {
+.nav-logo {
     border-right: 3px solid var(--orange);
+}
+
+.nav-logo > img {
+    height: 3rem;
 }
 
 .nav-links-container {
@@ -43,7 +48,7 @@ nav {
     display: flex;
 }
 
-.logo, .nav-link {
+.nav-logo, .nav-link {
     display: flex;
     align-items: center;
     padding: 0px 1.5rem;
@@ -55,7 +60,7 @@ nav {
 
 .nav-link:hover {
     background-color: var(--orange);
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
 }
 
@@ -66,36 +71,104 @@ nav {
 .hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr;
     /* grid-template-columns: repeat(auto-fit, minmax(336px, 1fr) ); */
-    min-height: 800px;
+    /* min-height: 800px; */
+    height: 100%;
+}
+
+.hero-section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    /* border: 1px solid var(--blue); */
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    font-size: 5rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
-    justify-content: center;
-    padding: 48px;
+    letter-spacing: 0.2rem;
 }
+
+.hero-logo {
+    position: relative;
+}
+
+.hero-logo h2 {
+    position: absolute;
+    bottom: 7rem;
+    right: 9rem;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    /* color: white; */
+}
+
+.neon {
+    color: #f0fdfa;
+    text-shadow:
+      0 0 6px #99f6e4,
+      0 0 9px #99f6e4,
+      0 0 21px #99f6e4,
+      0 0 38px var(--blue),
+      0 0 58px var(--blue),
+      0 0 68px var(--blue),
+      0 0 78px var(--blue),
+      0 0 107px var(--blue);
+}
+
+.neon:hover {
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 6px #99f6e4,
+        0 0 9px #99f6e4,
+        0 0 21px #99f6e4,
+        0 0 38px var(--blue),
+        0 0 58px var(--blue),
+        0 0 68px var(--blue),
+        0 0 78px var(--blue),
+        0 0 107px var(--blue);
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+
 
 .order-btn-wrapper {
     grid-column: 1 / -1;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    /* background-color: var(--orange); */
 }
 
 #order-btn {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     border: none;
-    padding: 1.2rem;
-    color: var(--orange);
-    background-color: #fff;
+    background: none;
+    /* padding: 1.2rem; */
+    /* color: var(--orange);
+    background-color: var(--white); */
+}
+
+#order-btn:hover {
+    /* background-color: var(--orange);
+    color: var(--white); */
+    cursor: pointer;
 }
 
 /* Order Page */
