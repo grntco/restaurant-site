@@ -13,6 +13,11 @@
     --white: #fffbeb;
 }
 
+
+html {
+    background-color: var(--orange);
+}
+
 body {
     background-color: var(--yellow);
     font-size: 16px;
@@ -87,7 +92,7 @@ nav {
 }
 
 .hero-text {
-    font-size: 4.5rem;
+    font-size: 4rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
@@ -105,6 +110,30 @@ nav {
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     /* color: white; */
+}
+
+.order-btn-wrapper {
+    grid-column: 1 / -1;
+    /* background-color: var(--orange); */
+}
+
+#order-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    /* padding: 1.2rem; */
+    /* color: var(--orange);
+    background-color: var(--white); */
+}
+
+#order-btn:hover {
+    /* background-color: var(--orange);
+    color: var(--white); */
+    cursor: pointer;
 }
 
 .neon {
@@ -143,32 +172,6 @@ nav {
     20%, 24%, 55% {        
         text-shadow: none;
     }    
-  }
-  
-
-
-.order-btn-wrapper {
-    grid-column: 1 / -1;
-    /* background-color: var(--orange); */
-}
-
-#order-btn {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
-    font-size: 1.8rem;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-    border: none;
-    background: none;
-    /* padding: 1.2rem; */
-    /* color: var(--orange);
-    background-color: var(--white); */
-}
-
-#order-btn:hover {
-    /* background-color: var(--orange);
-    color: var(--white); */
-    cursor: pointer;
 }
 
 /* Order Page */
