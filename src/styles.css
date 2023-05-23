@@ -26,6 +26,24 @@ body {
     height: 100vh;
 }
 
+h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
 /* Nav */
 
 nav {
@@ -33,10 +51,6 @@ nav {
     justify-content: space-between;
     height: 72px;
     z-index: 999;
-    font-weight: 800;
-    font-size: 1.3rem;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
     border-bottom: 3px solid var(--orange);
 }
 
@@ -51,6 +65,10 @@ nav {
 .nav-links-container {
     list-style: none;
     display: flex;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
 }
 
 .nav-logo, .nav-link {
@@ -71,6 +89,12 @@ nav {
 
 /* Content */
 
+#content {
+    background-color: var(--yellow);
+    padding: 48px 96px;
+    /* width: 100%; */
+}
+
 /* Home */
 
 .hero-section {
@@ -87,14 +111,11 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 48px;
     /* border: 1px solid var(--blue); */
 }
 
 .hero-text {
     font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
 }
 
 .hero-logo {
@@ -105,10 +126,7 @@ nav {
     position: absolute;
     bottom: 7rem;
     right: 9rem;
-    font-weight: 800;
     font-size: 1.8rem;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
     /* color: white; */
 }
 
@@ -120,9 +138,9 @@ nav {
 #order-btn {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    font-size: 1.8rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+    font-size: 1.8rem;
     border: none;
     background: none;
     /* padding: 1.2rem; */
@@ -176,7 +194,104 @@ nav {
 
 /* Order Page */
 
+.menu-page h1, .contact-page h1 {
+    margin: 2rem;
+}
+
+.menu-page, .contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.menu-section h2, .info-section h2 {
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 0.5rem;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    row-gap: 0.5rem;
+}
+.item-title {
+    width: 100%;
+    display: flex;
+}
+
+.item-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px dotted var(--orange);
+    /* height: 3px; */
+    /* width: 100%; */
+}
+
+.item-price {
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.item-description {
+    grid-column: 1 / -1;
+}
+
 /* Contact Page */
+
+.store-info-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-bottom: 4rem;
+}
+
+.info-section  {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.day-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.map {
+    width: 100%;
+    height: 592px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.map iframe {
+    width: 80%;
+    height: 100%;
+}
+
+
+
 
 /* Footer */
 
