@@ -26,6 +26,7 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--orange);
     height: 100vh;
+    position: relative;
 }
 
 h1, h2, h3 {
@@ -48,8 +49,7 @@ h3 {
     font-size: 1.2rem;
 }
 
-/* Nav */
-
+/* NAVIGATION BAR */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,7 @@ h3 {
 }
 
 .nav-logo, .nav-link {
-    display: flex;
+    display: grid;
     align-items: center;
     padding: 0px 1.5rem;
 }
@@ -92,15 +92,14 @@ h3 {
 }
 
 .banner {
-    background-color: var(--orange);
-    color: var(--yellow);
     display: grid;
     justify-content: center;
     padding: 0.5rem 0;
+    background-color: var(--orange);
+    color: var(--yellow);
 }
 
-/* Content */
-
+/* CONTENT CONTAINER */
 #content {
     background-color: var(--yellow);
     padding: 48px;
@@ -111,8 +110,8 @@ h3 {
 /* HOME PAGE */
 .home-page {
     display: grid;
-    gap: 4rem;
-    height: 100%;
+    row-gap: 2rem;
+    /* gap: 4rem; !!!!!!ON MOBILE ONLY!!!!! THIS CAN BE ROW-GAP!!!! */
     width: 80%;
 }
 
@@ -149,7 +148,7 @@ h3 {
     margin-top: 0.5rem;
 }
 
-#order-btn {
+#view-menu-btn {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
     letter-spacing: 0.2rem;
@@ -162,22 +161,19 @@ h3 {
     margin-top: 1rem;
 }
 
-#order-btn:hover {
+#view-menu-btn:hover {
     background-color: var(--yellow);
     color: var(--orange);
     cursor: pointer;
 }
 
 /* ORDER PAGE */
-.menu-page h1, .contact-page h1 {
-    margin: 2rem;
-}
-
-.menu-page, .contact-page {
+.menu-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
+    gap: 2rem;
 }
 
 .menu-container {
@@ -192,14 +188,9 @@ h3 {
     gap: 1rem;
 }
 
-/* .menu-section h2, .info-section h2 {
-    border-bottom: 3px solid var(--orange);
-    padding-bottom: 0.5rem;
-} */
-
 .items-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(448px, 1fr) );
     gap: 2rem;
 }
 
@@ -208,6 +199,7 @@ h3 {
     grid-template-columns: 1fr min-content;
     row-gap: 0.5rem;
 }
+
 .item-title {
     width: 100%;
     display: flex;
@@ -217,8 +209,6 @@ h3 {
     content: "";
     flex: 1;
     border-bottom: 3px dotted var(--orange);
-    /* height: 3px; */
-    /* width: 100%; */
 }
 
 .item-price {
@@ -232,15 +222,20 @@ h3 {
     grid-column: 1 / -1;
 }
 
-/* Contact Page */
+/* CONTACT PAGE */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 80%;
+}
 
-.store-info-container {
+.info-container {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
-  column-gap: 4rem;
-  row-gap: 2rem;
+  gap: 2rem 4rem;
   justify-content: center;
-  padding-bottom: 4rem;
   width: 100%;
 }
 
@@ -257,6 +252,7 @@ h3 {
 }
 
 .map {
+    margin-top: 2rem;
     width: 100%;
     height: 592px;
     display: flex;
@@ -268,8 +264,22 @@ h3 {
     height: 100%;
 }
 
+/* FOOTER */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    background-color: var(--orange);
+    color: var(--yellow);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 
-
-
-/* Footer */
+footer a {
+    color: var(--yellow);
+}
 
