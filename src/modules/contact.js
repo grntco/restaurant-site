@@ -1,6 +1,4 @@
 export default function loadContact() {
-    console.log('Hello from contact!');
-
     const contactPage = document.createElement('div');
     contactPage.classList.add('contact-page');
 
@@ -12,8 +10,6 @@ export default function loadContact() {
         infoContainer.classList.add('info-container');
 
         const createContactInfoSection = (function() {
-            console.log('hello from create contact info section!! yeah wow!');
-
             const contactInfoSection = document.createElement('div');
             contactInfoSection.classList.add('info-section');
 
@@ -30,8 +26,6 @@ export default function loadContact() {
         })();
 
         const createHoursSection = (function() {
-            console.log('hello from hours section!');
-
             const hoursSection = document.createElement('div');
             hoursSection.classList.add('info-section');
 
@@ -39,8 +33,6 @@ export default function loadContact() {
             h2.textContent = 'Hours';
 
             const createDayContainers = (function() {
-                console.log('hello from day containers!');
-
                 const days = [
                     {name: 'Mon', open: '5:00', close: '9:00'},
                     {name: 'Tue', open: '5:00', close: '9:00'},
@@ -51,8 +43,6 @@ export default function loadContact() {
                 ];
 
                 for (let i = 0; i < days.length; i++) {
-                    console.log('whats up with this?');
-
                     const dayContainer = document.createElement('div');
                     dayContainer.classList.add('day-container');
 
@@ -70,8 +60,6 @@ export default function loadContact() {
         })();
 
         const createLocationSection = (function() {
-            console.log('hello from create location!');
-
             const locationSection = document.createElement('div');
             locationSection.classList.add('info-section');
 

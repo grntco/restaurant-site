@@ -3,8 +3,6 @@ export default function loadHome() {
     homePage.classList.add('home-page');
 
     const createHeroSection = (function() {
-        console.log('hello there from IIFE!'); 
-
         const heroSection = document.createElement('div');
         heroSection.classList.add('hero-section');
 
@@ -18,13 +16,11 @@ export default function loadHome() {
     
         heroSection.appendChild(logo);
         heroSection.appendChild(h1);
-        
+
         homePage.appendChild(heroSection);
     })();
 
     const createCTA = (function() {
-        console.log('hello from CTA!');
-
         const CTAContainer = document.createElement('div')
         CTAContainer.classList.add('cta-container');
 
