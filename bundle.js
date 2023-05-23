@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/home */ \"./src/modules/home.js\");\n\n\n\nconst content = document.getElementById('content');\ncontent.appendChild((0,_modules_home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])());\n\n//# sourceURL=webpack://restaurant-site/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _modules_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/home */ \"./src/modules/home.js\");\n/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/contact */ \"./src/modules/contact.js\");\n\n\n\n\n(0,_modules_contact__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\nconst content = document.getElementById('content');\nconst homeBtn = document.getElementById('home-btn');\n\nconst reset = () => {\n    content.innerHTML = '';\n}\n\nhomeBtn.addEventListener('click', function() {\n    reset();\n    content.appendChild((0,_modules_home__WEBPACK_IMPORTED_MODULE_1__[\"default\"])());\n});\n\n\n\n//# sourceURL=webpack://restaurant-site/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/contact.js":
+/*!********************************!*\
+  !*** ./src/modules/contact.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\nfunction loadContact() {\n    console.log('Hello from contact!');\n\n    const contactPage = document.createElement('div');\n    contactPage.classList.add('contact-page');\n}\n\n//# sourceURL=webpack://restaurant-site/./src/modules/contact.js?");
 
 /***/ }),
 
