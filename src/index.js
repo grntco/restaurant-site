@@ -2,7 +2,7 @@ import './styles.css';
 import loadHome from './modules/home';
 import loadContact from './modules/contact';
 
-loadContact();
+
 
 const content = document.getElementById('content');
 const homeBtn = document.getElementById('home-btn');
@@ -15,4 +15,6 @@ homeBtn.addEventListener('click', function() {
     reset();
     content.appendChild(loadHome());
 });
+
+content.appendChild(loadContact());
 
