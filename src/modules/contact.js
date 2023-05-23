@@ -4,6 +4,9 @@ export default function loadContact() {
     const contactPage = document.createElement('div');
     contactPage.classList.add('contact-page');
 
+    const h1 = contactPage.appendChild(document.createElement('h1'));
+    h1.textContent = 'Contact Us';
+
     const createInfoContainer = (function() {
         const infoContainer = document.createElement('div');
         infoContainer.classList.add('info-container');
@@ -90,6 +93,18 @@ export default function loadContact() {
         })();
 
         contactPage.appendChild(infoContainer);
+    })();
+
+    const createMap = (function() {
+        const map = document.createElement('div');
+        map.classList.add('map');
+
+        const embed = map.appendChild(document.createElement('iframe'));
+        embed.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.4408197792063!2d-87.96818272283411!3d43.555696871106875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88049171727724d5%3A0x741e66e429a56866!2s551%20Krier%20Ln%2C%20Random%20Lake%2C%20WI%2053075!5e0!3m2!1sen!2sus!4v1684798541675!5m2!1sen!2sus'
+        embed.style.border = "none";
+        embed.referrerPolicy = 'no-referrer-when-downgrade';
+
+        contactPage.appendChild(map)
     })();
 
     return contactPage;
