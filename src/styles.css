@@ -7,12 +7,14 @@
 
 :root {
     --yellow: #fbbf24;
-    --red: #ef4444;
     --orange: #f97316;
-    --blue: #2dd4bf;
     --white: #fffbeb;
 }
 
+::selection {
+    background-color: var(--orange);
+    color: var(--white);
+}
 
 html {
     background-color: var(--orange);
@@ -48,7 +50,7 @@ h3 {
 
 /* Nav */
 
-nav {
+.top-nav {
     display: flex;
     justify-content: space-between;
     height: 72px;
@@ -89,6 +91,14 @@ nav {
     cursor: pointer;
 }
 
+.banner {
+    background-color: var(--orange);
+    color: var(--yellow);
+    display: grid;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
 /* Content */
 
 #content {
@@ -96,14 +106,12 @@ nav {
     padding: 48px;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* width: 100%; */
 }
 
-/* Home */
-
+/* HOME PAGE */
 .home-page {
     display: grid;
+    gap: 4rem;
     height: 100%;
     width: 80%;
 }
@@ -116,14 +124,19 @@ nav {
     align-items: center;
 }
 
+.hero-logo {
+    display: grid;
+    justify-content: center;
+}
+
 .hero-heading {
     font-size: 4rem;
     line-height: 6rem;
+    /* text-align: center; !!!!!!!!!ON MOBILE ONLY!!!!!!! */
 }
 
 .hero-heading span {
     border-bottom: 5px solid var(--orange);
-    /* padding-bottom: 0.5rem; */
 }
 
 .cta-container {
@@ -142,11 +155,11 @@ nav {
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     font-size: 1.2rem;
-    border: 3px solid var(--orange);
     padding: 0.5rem 1.5rem;
+    border: 3px solid var(--orange);
     background-color: var(--orange);
     color: var(--white);
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #order-btn:hover {
@@ -155,8 +168,7 @@ nav {
     cursor: pointer;
 }
 
-/* Order Page */
-
+/* ORDER PAGE */
 .menu-page h1, .contact-page h1 {
     margin: 2rem;
 }
