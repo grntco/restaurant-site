@@ -259,13 +259,15 @@ nav {
 /* Contact Page */
 
 .store-info-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  row-gap: 2rem;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-bottom: 4rem;
 }
 
-.info-section  {
+.info-section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -281,7 +283,6 @@ nav {
     width: 100%;
     height: 592px;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 }
 
