@@ -21,10 +21,6 @@ export default function loadHome() {
         homePage.appendChild(heroSection);
     })();
 
-    // const content = document.getElementById('content');
-    // content.textContent = "What's up?";
-    // content.appendChild(homePage);
 
-    // How do I append this to #content?????
     return homePage;
 }
