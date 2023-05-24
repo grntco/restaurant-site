@@ -61,9 +61,7 @@ export default function loadMenu() {
                 return [entrees, sandwiches, sides, drinks];
             };
 
-            // Creating the menu sections with items
             const menuArray = createMenuArray();
-            console.log(menuArray);
 
             for (let i = 0; i < menuArray.length; i++) {
                 const menuSection = menuContainer.appendChild(document.createElement('div'));
@@ -75,7 +73,7 @@ export default function loadMenu() {
                 const itemContainer = menuSection.appendChild(document.createElement('div'));
                 itemContainer.classList.add('items-container');
 
-                for (let j = 0; j < menuArray[i].items.length; j++) { //something aint right around these parts
+                for (let j = 0; j < menuArray[i].items.length; j++) {
                     const menuItem = itemContainer.appendChild(document.createElement('div'));
                     menuItem.classList.add('menu-item');
 
@@ -92,10 +90,8 @@ export default function loadMenu() {
                     itemDescription.textContent = menuArray[i].items[j].description;
                 }
             }
-
         })();
-
     })();
-    
+
     return menuPage;
 }
