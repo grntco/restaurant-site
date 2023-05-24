@@ -1,3 +1,6 @@
+import loadMenu from "./menu";
+import { content, reset } from "./pageload"
+
 export default function loadHome() {
     const homePage = document.createElement('div');
     homePage.classList.add('home-page');
@@ -29,7 +32,10 @@ export default function loadHome() {
         btn.id = 'view-menu-btn';
         btn.textContent = 'View Menu';
 
-        // The Button may need an event listener here to open the menu page.
+        btn.addEventListener('click', function() {
+            reset();
+            content.appendChild(loadMenu());
+        });
     })();
 
     return homePage;

@@ -2,16 +2,14 @@ import './styles.css';
 import loadHome from './modules/home';
 import loadContact from './modules/contact';
 import loadMenu from './modules/menu';
+import { content, init, reset } from './modules/pageload';
 
-const content = document.getElementById('content');
+// const content = document.getElementById('content');
 const homeBtn = document.getElementById('home-btn');
 const contactBtn = document.getElementById('contact-btn');
 const menuBtn = document.getElementById('menu-btn');
-// const viewMenuBtn = document.getElementById('view-menu-btn');
 
-const reset = () => {
-    content.innerHTML = '';
-}
+content.appendChild(init());
 
 homeBtn.addEventListener('click', function() {
     reset();
@@ -27,12 +25,5 @@ menuBtn.addEventListener('click', function() {
     reset();
     content.appendChild(loadMenu());
 });
-
-// viewMenuBtn.addEventListener('click', function() {
-//     reset();
-//     content.appendChild(loadMenu());
-// });
-
-// DOESNT WORK?
 
 
