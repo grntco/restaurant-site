@@ -6,13 +6,13 @@ export default function loadMenu() {
     h1.textContent = 'Our Menu';
 
     const createMenuContainer = (function() {
-        const menuContainer = document.createElement('div');
+        const menuContainer = menuPage.appendChild(document.createElement('div'));
         menuContainer.classList.add('menu-container');
 
         const createMenuSections = (function() {
-            const createMenuArray = (function() {
+            const createMenuArray = function() {
                 class MenuSection {
-                    constructor(title, items) { //items will be an array
+                    constructor(title, items) {
                         this.title = title;
                         this.items = items;
                     }
@@ -58,30 +58,44 @@ export default function loadMenu() {
                     ]
                 );
                 
-                const menuArray = [entrees, sandwiches, sides, drinks];
-                return menuArray;
-            })();
+                return [entrees, sandwiches, sides, drinks];
+            };
 
+            // Creating the menu sections with items
+            const menuArray = createMenuArray();
+            console.log(menuArray);
 
+            for (let i = 0; i < menuArray.length; i++) {
+                const menuSection = menuContainer.appendChild(document.createElement('div'));
+                menuSection.classList.add('menu-section');
+
+                const h2 = menuSection.appendChild(document.createElement('h2'));
+                h2.textContent = menuArray[i].title;
+
+                const itemContainer = menuSection.appendChild(document.createElement('div'));
+                itemContainer.classList.add('items-container');
+
+                for (let j = 0; j < menuArray[i].items.length; j++) { //something aint right around these parts
+                    const menuItem = itemContainer.appendChild(document.createElement('div'));
+                    menuItem.classList.add('menu-item');
+
+                    const itemTitle = menuItem.appendChild(document.createElement('h3'));
+                    itemTitle.classList.add('item-title');
+                    itemTitle.textContent = menuArray[i].items[j].title;
+
+                    const itemPrice = menuItem.appendChild(document.createElement('div'));
+                    itemPrice.classList.add('item-price');
+                    itemPrice.textContent = menuArray[i].items[j].price;
+
+                    const itemDescription = menuItem.appendChild(document.createElement('p'));
+                    itemDescription.classList.add('item-description');
+                    itemDescription.textContent = menuArray[i].items[j].description;
+                }
+            }
 
         })();
-        
+
     })();
     
     return menuPage;
 }
-
-
-
-// const menuArray = [
-//     {
-//         title: 'Entrees',
-//         items: [
-//             {
-//                 title: 'The Grits & Griddles',
-//                 price: 12,
-//                 description: 'Our world-famous buttery grits topped with two sunny-side eggs and bacon crumbles. Served with sausage and even buttery-er toast.'
-//             },
-//         ]
-//     },
-// ]
