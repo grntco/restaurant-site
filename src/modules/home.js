@@ -1,5 +1,5 @@
 import loadMenu from "./menu";
-import { content, reset } from "./pageload"
+import { content, resetContent } from "./pageload"
 
 export default function loadHome() {
     const homePage = document.createElement('div');
@@ -33,7 +33,7 @@ export default function loadHome() {
         btn.textContent = 'View Menu';
 
         btn.addEventListener('click', function() {
-            reset();
+            resetContent();
             content.appendChild(loadMenu());
         });
     })();

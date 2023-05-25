@@ -292,6 +292,16 @@ footer a {
     color: var(--yellow);
 }
 
+@media screen and (max-width: 1024px) {
+    .hero-section {
+        gap: 0rem;
+    }
+
+    .hero-heading {
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 767px) {
 
     :root {
@@ -299,15 +309,28 @@ footer a {
     }
 
     #content {
-        padding: 24px 8px 96px 8px;
+        padding: 24px 16px 96px 16px;
+    }
+
+    .home-page, .menu-page, .contact-page {
+        width: 100%;
     }
 
     .home-page {
         row-gap: 4rem;
     }
 
-    .hero-heading {
-        text-align: center;
+    .hero-logo {
+        align-items: center;
     }
 
+    .hero-logo img {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-logo img {
+        height: 60%;
+    }
 }

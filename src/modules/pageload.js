@@ -1,7 +1,10 @@
 import loadHome from "./home";
 
 const content = document.getElementById('content');
-// const body = document.getElementsByTagName('body');
+
+const resetContent = () => {
+    content.innerHTML = '';
+}
 
 const loadPage = () => {
     const createNav = (function() {
@@ -59,10 +62,4 @@ const loadPage = () => {
     content.appendChild(loadHome());
 };
 
-const reset = () => {
-    content.innerHTML = '';
-}
-
-
-
-export { loadPage, content, reset }
+export { loadPage, content, resetContent }

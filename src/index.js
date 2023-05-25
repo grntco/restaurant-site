@@ -2,7 +2,7 @@ import './styles.css';
 import loadHome from './modules/home';
 import loadContact from './modules/contact';
 import loadMenu from './modules/menu';
-import { content, loadPage, reset } from './modules/pageload';
+import { content, loadPage, resetContent } from './modules/pageload';
 
 const init = (function() {
     loadPage();
@@ -12,17 +12,17 @@ const init = (function() {
     const menuBtn = document.getElementById('menu-btn');
 
     homeBtn.addEventListener('click', function() {
-        reset();
+        resetContent();
         content.appendChild(loadHome());
     });
 
     contactBtn.addEventListener('click', function() {
-        reset();
+        resetContent();
         content.appendChild(loadContact());
     });
 
     menuBtn.addEventListener('click', function() {
-        reset();
+        resetContent();
         content.appendChild(loadMenu());
     });
 })();
