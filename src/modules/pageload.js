@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import eggPan from '../images/egg-pan.svg';
 
 const content = document.getElementById('content');
 
@@ -16,7 +17,9 @@ const loadPage = () => {
 
             const navLogo = topNav.appendChild(document.createElement('div'));
             navLogo.classList.add('nav-logo');
-            navLogo.innerHTML = `<img src="/src/images/egg-pan.svg" alt="egg pan logo" />`;
+            const img = navLogo.appendChild(document.createElement('img'));
+            img.src = eggPan;
+            img.alt = 'egg pan logo';
 
             const ul = topNav.appendChild(document.createElement('ul'));
             ul.classList.add('nav-links-container');

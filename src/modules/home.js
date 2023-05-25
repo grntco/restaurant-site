@@ -1,5 +1,6 @@
 import loadMenu from "./menu";
 import { content, resetContent } from "./pageload"
+import heroLogo from '../images/hero-logo.png';
 
 export default function loadHome() {
     const homePage = document.createElement('div');
@@ -11,7 +12,9 @@ export default function loadHome() {
 
         const logo = heroSection.appendChild(document.createElement('div'));
         logo.classList.add('hero-logo');
-        logo.innerHTML = `<img src="/src/images/hero-logo.png" alt="Grits & Griddles logo">`
+        const img = logo.appendChild(document.createElement('img'));
+        img.src = heroLogo;
+        img.alt = 'Grits & Griddles logo';
 
         const h1 = heroSection.appendChild(document.createElement('h1'));
         h1.classList.add('hero-heading');
