@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid var(--red); */
 }
 
 :root {
@@ -18,12 +17,14 @@
 
 html {
     background-color: var(--orange);
+    overflow-x: hidden;
+    font-size: 16px;
 }
 
 body {
     background-color: var(--yellow);
-    font-size: 16px;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
     color: var(--orange);
     height: 100vh;
     position: relative;
@@ -97,6 +98,7 @@ h3 {
     padding: 0.5rem 0;
     background-color: var(--orange);
     color: var(--yellow);
+    text-align: center;
 }
 
 /* CONTENT CONTAINER */
@@ -111,7 +113,6 @@ h3 {
 .home-page {
     display: grid;
     row-gap: 2rem;
-    /* gap: 4rem; !!!!!!ON MOBILE ONLY!!!!! THIS CAN BE ROW-GAP!!!! */
     width: 80%;
 }
 
@@ -131,7 +132,6 @@ h3 {
 .hero-heading {
     font-size: 4rem;
     line-height: 6rem;
-    /* text-align: center; !!!!!!!!!ON MOBILE ONLY!!!!!!! */
 }
 
 .hero-heading span {
@@ -282,4 +282,24 @@ footer {
 
 footer a {
     color: var(--yellow);
+}
+
+@media screen and (max-width: 767px) {
+
+    :root {
+        font-size: 14px;
+    }
+
+    #content {
+        padding: 24px 8px 96px 8px;
+    }
+
+    .home-page {
+        row-gap: 4rem;
+    }
+
+    .hero-heading {
+        text-align: center;
+    }
+
 }
