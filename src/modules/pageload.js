@@ -2,12 +2,12 @@ import loadHome from "./home";
 
 const content = document.getElementById('content');
 
-const init = () => {
-    return loadHome();
+const loadPage = () => {
+    content.appendChild(loadHome());
 };
 
 const reset = () => {
     content.innerHTML = '';
 }
 
-export { init, content, reset }
+export { loadPage, content, reset }
