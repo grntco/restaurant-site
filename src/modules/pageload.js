@@ -1,13 +1,59 @@
 import loadHome from "./home";
 
 const content = document.getElementById('content');
+// const body = document.getElementsByTagName('body');
 
 const loadPage = () => {
+    const createNav = (function() {
+        console.log('hello from createNav!');
+        const nav = document.body.insertBefore(document.createElement('nav'), content);
+        
+        const createTopNav = (function() {
+            console.log('hello from createTopNav!')
+
+            const topNav = nav.appendChild(document.createElement('div'));
+            topNav.classList.add('top-nav');
+
+            const navLogo = topNav.appendChild(document.createElement('div'));
+            navLogo.classList.add('nav-logo');
+            navLogo.innerHTML = `<img src="/src/images/egg-pan.svg" alt="egg pan logo" />`;
+
+            const ul = topNav.appendChild(document.createElement('ul'));
+            ul.classList.add('nav-links-container');
+
+            const homeBtn = ul.appendChild(document.createElement('li'));
+            homeBtn.classList.add('nav-link');
+            homeBtn.id = 'home-btn';
+            homeBtn.textContent = 'Home';
+
+            const menuBtn = ul.appendChild(document.createElement('li'));
+            menuBtn.classList.add('nav-link');
+            menuBtn.id = 'menu-btn';
+            menuBtn.textContent = 'Menu';
+
+            const contactBtn = ul.appendChild(document.createElement('li'));
+            contactBtn.classList.add('nav-link');
+            contactBtn.id = 'contact-btn';
+            contactBtn.textContent = 'Contact';
+        })();
+
+        const createBanner = (function() {
+            console.log('hello from createBanner!')
+            const banner = nav.appendChild(document.createElement('div'));
+            banner.classList.add('banner');
+
+            const h3 = banner.appendChild(document.createElement('h3'));
+            h3.textContent = 'An All-American Breakfast Diner Experience';
+        })();
+    })();
+
     content.appendChild(loadHome());
 };
 
 const reset = () => {
     content.innerHTML = '';
 }
+
+
 
 export { loadPage, content, reset }
