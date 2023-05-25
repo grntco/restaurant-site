@@ -5,12 +5,9 @@ const content = document.getElementById('content');
 
 const loadPage = () => {
     const createNav = (function() {
-        console.log('hello from createNav!');
         const nav = document.body.insertBefore(document.createElement('nav'), content);
         
         const createTopNav = (function() {
-            console.log('hello from createTopNav!')
-
             const topNav = nav.appendChild(document.createElement('div'));
             topNav.classList.add('top-nav');
 
@@ -38,13 +35,25 @@ const loadPage = () => {
         })();
 
         const createBanner = (function() {
-            console.log('hello from createBanner!')
             const banner = nav.appendChild(document.createElement('div'));
             banner.classList.add('banner');
 
             const h3 = banner.appendChild(document.createElement('h3'));
             h3.textContent = 'An All-American Breakfast Diner Experience';
         })();
+    })();
+
+    const createFooter = (function() {
+        const footer = document.body.appendChild(document.createElement('footer'));
+
+        const icon = footer.appendChild(document.createElement('a'));
+        icon.href = 'https://github.com/grntco';
+        icon.target = '_blank';
+        icon.title = 'GitHub';
+        icon.innerHTML = `<i class="fa-brands fa-github"></i>`;
+
+        const name = footer.appendChild(document.createElement('div'));
+        name.textContent = 'Grant Collins';
     })();
 
     content.appendChild(loadHome());
