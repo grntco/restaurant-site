@@ -8,4 +8,4 @@ So, when a user clicks on a tab in the nav bar, the page content is generated fr
 
 There is also an initial module to load the navigation bar, footer, and homepage content (by calling loadHome() from the home.js module) when the site is first loaded.
 
-Live demo: 
+Live demo: https://grntco.github.io/restaurant-site/
