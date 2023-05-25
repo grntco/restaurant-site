@@ -62,4 +62,4 @@ const loadPage = () => {
     content.appendChild(loadHome());
 };
 
-export { loadPage, content, resetContent }
+export { content, resetContent, loadPage }

@@ -30,7 +30,7 @@ export default function loadMenu() {
                     [   
                         new MenuItem('The Grits & Griddles', 12, 'Our world-famous buttery grits topped with two sunny-side eggs and bacon crumbles. Served with sausage and even buttery-er toast.'),
                         new MenuItem('Biscuits & Gravy', 10, 'Two sausage biscuits lathered in gravy and cheddar cheese.'),
-                        new MenuItem('Omelette', 12, 'Your choice of add-ins: sausage crumbles, bacon, ham, cheddar cheese, onions, peppers, and mushrooms.'),
+                        new MenuItem('Omelette', 12, 'Your choice of add-ins: sausage crumbles, bacon, ham, cheddar cheese, onions, peppers and mushrooms.'),
                         new MenuItem('Pancakes', 13, `Five of 'em. Topped with butter and served with a side of maple syrup.`),
                     ]
                 );
@@ -47,7 +47,7 @@ export default function loadMenu() {
                         new MenuItem('Potatoes', 3, 'Add cheese and bacon crumbles for an extra $1... oh my...'),
                         new MenuItem('Biscuit', 3, 'Dense yet fluffy. Dissolves in the mouth.'),
                         new MenuItem('Grits', 3, 'Our world-famous buttery grits.'),
-                        new MenuItem('Fruit', 4, 'Strawberries, banana, watermelon, and blueberries.')
+                        new MenuItem('Fruit', 4, 'Strawberries, banana, watermelon and blueberries.')
                     ]
                 );
                 
@@ -83,7 +83,7 @@ export default function loadMenu() {
 
                     const itemPrice = menuItem.appendChild(document.createElement('div'));
                     itemPrice.classList.add('item-price');
-                    itemPrice.textContent = menuArray[i].items[j].price;
+                    itemPrice.textContent = `$${menuArray[i].items[j].price}`;
 
                     const itemDescription = menuItem.appendChild(document.createElement('p'));
                     itemDescription.classList.add('item-description');
